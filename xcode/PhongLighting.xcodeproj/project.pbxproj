@@ -16,12 +16,14 @@
 		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
 		00B9955A1B128DF400A5C623 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995581B128DF400A5C623 /* IOKit.framework */; };
 		00B9955B1B128DF400A5C623 /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995591B128DF400A5C623 /* IOSurface.framework */; };
+		5245F3C71DFE69060064DC31 /* sphere.obj in Resources */ = {isa = PBXBuildFile; fileRef = 5245F3C61DFE69060064DC31 /* sphere.obj */; };
+		5245F3C91DFE6C520064DC31 /* phong_shading.vert in Resources */ = {isa = PBXBuildFile; fileRef = 5245F3C81DFE6C520064DC31 /* phong_shading.vert */; };
+		5245F3CB1DFE6D690064DC31 /* phong_shading.frag in Resources */ = {isa = PBXBuildFile; fileRef = 5245F3CA1DFE6D690064DC31 /* phong_shading.frag */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		58A3F1BCA01241A3B33018FD /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D07460F1948E48E2E6EAF /* CinderApp.icns */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		C914CF811DFA4D5000E7F457 /* sphere.obj in Resources */ = {isa = PBXBuildFile; fileRef = C914CF801DFA4D5000E7F457 /* sphere.obj */; };
-		C914CF851DFA9BB600E7F457 /* phong.vert in Resources */ = {isa = PBXBuildFile; fileRef = C914CF841DFA9BB600E7F457 /* phong.vert */; };
-		C92403B01DFBD9BD000194F7 /* phong.frag in Resources */ = {isa = PBXBuildFile; fileRef = C92403AF1DFBD9BD000194F7 /* phong.frag */; };
+		C914CF851DFA9BB600E7F457 /* phong_lighting.vert in Resources */ = {isa = PBXBuildFile; fileRef = C914CF841DFA9BB600E7F457 /* phong_lighting.vert */; };
+		C92403B01DFBD9BD000194F7 /* phong_lighting.frag in Resources */ = {isa = PBXBuildFile; fileRef = C92403AF1DFBD9BD000194F7 /* phong_lighting.frag */; };
 		DCEB0390036943CB8821F0D7 /* PhongLightingApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D2CC5333D8484862A673C337 /* PhongLightingApp.cpp */; };
 /* End PBXBuildFile section */
 
@@ -41,12 +43,14 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		3527CCD569574A6B8F83A2EE /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
 		3F5D07460F1948E48E2E6EAF /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CinderApp.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; };
+		5245F3C61DFE69060064DC31 /* sphere.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = sphere.obj; path = ../resources/sphere.obj; sourceTree = "<group>"; };
+		5245F3C81DFE6C520064DC31 /* phong_shading.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = phong_shading.vert; path = ../resources/phong_shading.vert; sourceTree = "<group>"; };
+		5245F3CA1DFE6D690064DC31 /* phong_shading.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = phong_shading.frag; path = ../resources/phong_shading.frag; sourceTree = "<group>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		8D1107320486CEB800E47090 /* PhongLighting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhongLighting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A45FB2F2F64B149B009C73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C914CF801DFA4D5000E7F457 /* sphere.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = sphere.obj; path = ../../../../Downloads/sphere.obj; sourceTree = "<group>"; };
-		C914CF841DFA9BB600E7F457 /* phong.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = phong.vert; sourceTree = "<group>"; };
-		C92403AF1DFBD9BD000194F7 /* phong.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = phong.frag; sourceTree = "<group>"; };
+		C914CF841DFA9BB600E7F457 /* phong_lighting.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = phong_lighting.vert; sourceTree = "<group>"; };
+		C92403AF1DFBD9BD000194F7 /* phong_lighting.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = phong_lighting.frag; sourceTree = "<group>"; };
 		D2CC5333D8484862A673C337 /* PhongLightingApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = PhongLightingApp.cpp; path = ../src/PhongLightingApp.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,11 +151,13 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C914CF801DFA4D5000E7F457 /* sphere.obj */,
+				5245F3C61DFE69060064DC31 /* sphere.obj */,
 				3F5D07460F1948E48E2E6EAF /* CinderApp.icns */,
 				B8A45FB2F2F64B149B009C73 /* Info.plist */,
-				C914CF841DFA9BB600E7F457 /* phong.vert */,
-				C92403AF1DFBD9BD000194F7 /* phong.frag */,
+				C914CF841DFA9BB600E7F457 /* phong_lighting.vert */,
+				C92403AF1DFBD9BD000194F7 /* phong_lighting.frag */,
+				5245F3C81DFE6C520064DC31 /* phong_shading.vert */,
+				5245F3CA1DFE6D690064DC31 /* phong_shading.frag */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -217,9 +223,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C92403B01DFBD9BD000194F7 /* phong.frag in Resources */,
-				C914CF851DFA9BB600E7F457 /* phong.vert in Resources */,
-				C914CF811DFA4D5000E7F457 /* sphere.obj in Resources */,
+				C92403B01DFBD9BD000194F7 /* phong_lighting.frag in Resources */,
+				5245F3CB1DFE6D690064DC31 /* phong_shading.frag in Resources */,
+				C914CF851DFA9BB600E7F457 /* phong_lighting.vert in Resources */,
+				5245F3C71DFE69060064DC31 /* sphere.obj in Resources */,
+				5245F3C91DFE6C520064DC31 /* phong_shading.vert in Resources */,
 				58A3F1BCA01241A3B33018FD /* CinderApp.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

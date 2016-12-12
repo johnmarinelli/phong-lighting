@@ -16,12 +16,14 @@ class PhongLightingApp : public App {
 	void draw() override;
   
   gl::BatchRef mSphere;
+  gl::BatchRef mSphereShaded;
   gl::BatchRef mBatch;
-  gl::GlslProgRef mGlsl;
+  gl::GlslProgRef mPhongShading;
+  gl::GlslProgRef mPhongLighting;
   CameraPersp mCamera;
   
-  glm::vec3 mCameraPosition{3,2,3};
-  glm::vec3 mCameraEyePoint{0,0,0};
+  glm::vec3 mCameraPosition{6,0,3};
+  glm::vec3 mCameraEyePoint{3,0,0};
 };
 
 void PhongLightingApp::setup()
@@ -29,12 +31,16 @@ void PhongLightingApp::setup()
   mCamera.setPerspective(50.f, getWindowAspectRatio(), 0.1f, 1000.f);
   mCamera.lookAt(mCameraPosition, mCameraEyePoint);
   
-  mGlsl = gl::GlslProg::create(loadResource("phong.vert"), loadResource("phong.frag"));
-  mGlsl->bind();
+  mPhongLighting = gl::GlslProg::create(loadResource("phong_lighting.vert"), loadResource("phong_lighting.frag"));
+  
+  mPhongShading = gl::GlslProg::create(loadResource("phong_shading.vert"),  loadResource("phong_shading.frag"));
+  
+  mPhongShading->bind();
 
   ObjLoader loader{loadResource("sphere.obj")};
-  //mSphere = gl::Batch::create(loader, mGlsl);
-  mBatch = gl::Batch::create(geom::Cube{}, mGlsl);
+  mSphere = gl::Batch::create(loader, mPhongLighting);
+  mSphereShaded = gl::Batch::create(loader, mPhongShading);
+  //mBatch = gl::Batch::create(geom::Cube{}, mPhongShading);
   
   gl::enableDepthWrite();
   gl::enableDepthRead();
@@ -73,8 +79,18 @@ void PhongLightingApp::draw()
 	gl::clear(Color(0, 0, 0));
   gl::setMatrices(mCamera);
   
-  mBatch->draw();
-  //mSphere->draw();
+  gl::pushModelMatrix();
+  mSphere->draw();
+  //gl::popModelMatrix();
+  
+  //gl::pushModelMatrix();
+  gl::translate(glm::vec3{2,0,0});
+  gl::rotate(sin(getElapsedFrames()) * 0.1f, glm::vec3{2,0,0});
+  
+  gl::drawLine(glm::vec3{-1,0,0}, glm::vec3{1,0,0});
+
+  mSphereShaded->draw();
+  gl::popModelMatrix();
 }
 
 CINDER_APP( PhongLightingApp, RendererGl )

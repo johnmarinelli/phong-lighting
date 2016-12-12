@@ -31,3 +31,4 @@
 *.app
 
 .DS_Store
+xcode/build/PhongLighting.build/*
